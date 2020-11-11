@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Product Manager</title>
+</head>
+<body>
+<form action="#" th:action="@{/save}" th:object="${product}" method="post">
+Product id <input type="text" th:field="*{id}"> <br>
+Product name <input type="text" th:field="*{name}"> <br>
+Product price <input type="text" th:field="*{price}"> <br>
+<button type="submit">save</button>
+</form>
+</body>
+</html>

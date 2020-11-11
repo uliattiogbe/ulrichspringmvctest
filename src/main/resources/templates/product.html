@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Product Manager</title>
+</head>
+
+<body>
+<h1> list of products we have</h1>
+<table border="1">
+<thread>
+<tr>
+<th> Id</th>
+<th> name</th>
+<th> price</th>
+</tr>
+</thread>
+<tbody>
+<tr th:each="prod:${products}">
+<td th:text="${prod.id}"> Id</td>
+<td th:text="${prod.name}"> name</td>
+<td th:text="${prod.price}"> email</td>
+<td> <a th:href="@{/delete/{id}(id=${prod.id})}"> Delete</a> </td> 
+<td> <a th:href="@{/edit/{id}(id=${prod.id})}"> edit</a> </td>
+
+</tr>
+</tbody>
+</table>
+</body>
+</html>
